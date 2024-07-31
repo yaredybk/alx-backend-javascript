@@ -6,7 +6,7 @@
  * @returns {[{...import("./0-get_list_students").Student,grade:number | 'N/A'}]}
  */
 export default function updateStudentGradeByCity(students, city, newGrades) {
-  if (students instanceof Array)
+  if (students instanceof Array) {
     return students
       .filter((stu) => stu.location === city)
       .map((student) => {
@@ -17,5 +17,6 @@ export default function updateStudentGradeByCity(students, city, newGrades) {
           grade,
         };
       });
+  }
   return [];
 }
