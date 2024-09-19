@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function readDatabase(filePath) {
+function readDatabase (filePath) {
   return new Promise((resolve, reject) => {
     try {
       const data = fs.readFileSync(filePath, 'utf8');
@@ -28,6 +28,4 @@ function readDatabase(filePath) {
   });
 }
 
-module.exports = {
-  readDatabase,
-};
+module.exports = { readDatabase };

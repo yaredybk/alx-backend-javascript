@@ -1,7 +1,7 @@
 const { readDatabase } = require('../utils');
 
 class StudentsController {
-  static getAllStudents(req, res) {
+  static getAllStudents (req, res) {
     readDatabase(process.argv[2])
       .then((studentsByField) => {
         let stat = 'This is the list of our students';
@@ -19,7 +19,7 @@ class StudentsController {
       });
   }
 
-  static getAllStudentsByMajor(req, res) {
+  static getAllStudentsByMajor (req, res) {
     const { major } = req.params;
     if (major !== 'CS' && major !== 'SWE') {
       res.status(500).send('Major parameter must be CS or SWE');
