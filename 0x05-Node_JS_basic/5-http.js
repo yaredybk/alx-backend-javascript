@@ -37,7 +37,9 @@ function countStudents(filePath) {
 
 const app = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  switch (req.url) {
+  const url = new URL(req.url, `http://localhost:${req.socket.localPort}`);
+  const { pathname } = url;
+  switch (pathname) {
     case '/':
       res.writeHead(200, { 'Content-Type': 'text/plain' });
       res.end('Hello Holberton School!');
