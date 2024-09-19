@@ -23,10 +23,10 @@ function countStudents(filePath) {
         }
       });
       let stat = 'This is the list of our students';
-      stat += `Number of students: ${lines.length}`;
+      stat += `\nNumber of students: ${lines.length}`;
       Object.keys(groups).forEach((key) => {
         const gr = groups[key];
-        stat += `Number of students in ${key}: ${gr.count}. List: ${gr.names.join(', ')}`;
+        stat += `\nNumber of students in ${key}: ${gr.count}. List: ${gr.names.join(', ')}`;
       });
       resolve(stat);
     } catch (error) {
