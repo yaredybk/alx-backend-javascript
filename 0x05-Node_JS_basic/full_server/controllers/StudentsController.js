@@ -28,7 +28,8 @@ class StudentsController {
 
     readDatabase(process.argv[2])
       .then((studentsByField) => {
-        res.status(200).send(`List: ${studentsByField[major].names.join(', ')}`);
+        res.status(200).send(`List: ${
+          studentsByField[major].names.join(', ')}`);
       })
       .catch((err) => {
         console.warn(err);
