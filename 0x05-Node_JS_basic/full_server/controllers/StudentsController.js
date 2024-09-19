@@ -7,7 +7,7 @@ class StudentsController {
         let stat = 'This is the list of our students';
         Object.keys(studentsByField).forEach((key) => {
           const gr = studentsByField[key];
-          stat += `Number of students in ${key}: ${
+          stat += `\nNumber of students in ${key}: ${
             gr.count
           }. List: ${gr.names.join(', ')}`;
         });
@@ -28,7 +28,7 @@ class StudentsController {
 
     readDatabase(process.argv[2])
       .then((studentsByField) => {
-        res.status(200).send(`List: ${studentsByField[major].join(', ')}`);
+        res.status(200).send(`List: ${studentsByField[major].names.join(', ')}`);
       })
       .catch((err) => {
         console.warn(err);
