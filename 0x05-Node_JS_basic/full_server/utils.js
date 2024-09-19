@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-function countStudents(filePath) {
-  return new Promise(() => {
+function readDatabase(filePath) {
+  return new Promise((resolve, reject) => {
     try {
       const data = fs.readFileSync(filePath, 'utf8');
       const lines = data
@@ -21,17 +21,13 @@ function countStudents(filePath) {
           groups[field] = { count: 1, names: [line[nameInd]] };
         }
       });
-      console.log(`Number of students: ${lines.length}`);
-      Object.keys(groups).forEach((key) => {
-        const gr = groups[key];
-        console.log(
-          `Number of students in ${key}: ${gr.count}. List: ${gr.names.join(', ')}`,
-        );
-      });
+      resolve(groups);
     } catch (error) {
-      throw new Error('Cannot load the database');
+      reject(error);
     }
   });
 }
 
-module.exports = countStudents;
+module.exports = {
+  readDatabase,
+};
