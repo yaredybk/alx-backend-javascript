@@ -20,7 +20,6 @@ function countStudents(filePath) {
         groups[field] = { count: 1, names: [line[nameInd]] };
       }
     });
-    console.warn(lines);
     console.log(`Number of students: ${lines.length}`);
     Object.keys(groups).forEach((key) => {
       const gr = groups[key];

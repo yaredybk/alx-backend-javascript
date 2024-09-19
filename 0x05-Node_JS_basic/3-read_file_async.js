@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function countStudents(filePath) {
-  return new Promise(() => {
+  return new Promise((resolve, reject) => {
     try {
       const data = fs.readFileSync(filePath, 'utf8');
       const lines = data
@@ -28,8 +28,9 @@ function countStudents(filePath) {
           `Number of students in ${key}: ${gr.count}. List: ${gr.names.join(', ')}`,
         );
       });
+      resolve();
     } catch (error) {
-      throw new Error('Cannot load the database');
+      reject(new Error('Cannot load the database'));
     }
   });
 }
