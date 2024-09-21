@@ -4,7 +4,7 @@
   "description": "learning unit test in nodejs #ALX",
   "main": " ",
   "scripts": {
-    "test": "npm run test *.test.js"
+    "test": "node ./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,11 @@
   "bugs": {
     "url": "https://github.com/yaredybk/alx-backend-javascript/issues"
   },
-  "homepage": "https://github.com/yaredybk/alx-backend-javascript#readme"
+  "homepage": "https://github.com/yaredybk/alx-backend-javascript#readme",
+  "devDependencies": {
+    "mocha": "^10.7.3"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
 }
