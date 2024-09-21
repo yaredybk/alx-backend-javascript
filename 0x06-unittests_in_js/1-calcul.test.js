@@ -44,7 +44,7 @@ const testCases = [
 describe('calculateNumber', () => {
   testCases.forEach(([a, b, c, d]) => {
     it(`test ${a}, ${b}, ${c}:`, () => {
-      assert.strictEqual(calculateNumber(a, b, c), d);
+      assert.strictEqual(calculateNumber(c, a, b), d);
     });
   });
 });

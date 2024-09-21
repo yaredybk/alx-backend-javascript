@@ -1,4 +1,4 @@
-const calculateNumber = (a, b, type) => {
+const calculateNumber = (type, a, b) => {
   const ax = Math.round(a);
   const bx = Math.round(b);
   switch (type) {
