@@ -9,7 +9,7 @@ const calculateNumber = (type, a, b) => {
     case 'DIVIDE':
       return bx ? ax / bx : 'Error';
     default:
-      return 0;
+      return 'Invalid Type: USE: SUM | SUBTRACT | DIVIDE';
   }
 };
 
