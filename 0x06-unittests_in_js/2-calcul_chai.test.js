@@ -44,6 +44,7 @@ const testCases = [
 describe('calculateNumber', () => {
   testCases.forEach(([a, b, c, d]) => {
     it(`test ${a}, ${b}, ${c}:`, () => {
+      expect.assertions(2);
       expect(calculateNumber(c, a, b)).to.equal(d);
     });
   });
