@@ -18,7 +18,7 @@ const testCases = [
 
 describe('calculateNumber', () => {
   testCases.forEach(([a, b, c]) => {
-    it('floating point whole numbers', () => {
+    it(`test ${a}, ${b}:`, () => {
       assert.strictEqual(calculateNumber(a, b), c);
     });
   });
