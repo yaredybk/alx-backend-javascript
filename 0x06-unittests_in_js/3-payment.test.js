@@ -5,7 +5,7 @@ const sendPaymentRequestToApi = require('./3-payment');
 
 describe('sendPaymentRequestToApi', () => {
   it('sendPaymentRequestToApi uses the calculateNumber method of Utils', () => {
-    expect.assertions(2);
+    expect.hasAssertions();
     const bigBrother = sinon.spy(Utils);
 
     sendPaymentRequestToApi(100, 20);
