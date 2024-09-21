@@ -5,7 +5,7 @@ const calculateNumber = (type, a, b) => {
     case 'SUM':
       return ax + bx;
     case 'SUBTRACT':
-      return bx - ax;
+      return ax - bx;
     case 'DIVIDE':
       return bx ? ax / bx : 'Error';
     default:
