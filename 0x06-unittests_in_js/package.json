@@ -1,0 +1,29 @@
+{
+  "name": "0x06-unittests_in_js",
+  "version": "1.0.0",
+  "description": "learning unit test in nodejs #ALX",
+  "main": " ",
+  "scripts": {
+    "test": "npm run test *.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaredybk/alx-backend-javascript.git"
+  },
+  "keywords": [
+    "Unittests in JS",
+    "UnitTests",
+    "Back-end",
+    "JavaScript",
+    "ES6",
+    "NodeJS",
+    "ExpressJS",
+    "Mocha"
+  ],
+  "author": "yared b. <yb12ybk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yaredybk/alx-backend-javascript/issues"
+  },
+  "homepage": "https://github.com/yaredybk/alx-backend-javascript#readme"
+}
